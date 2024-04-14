@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div><h1>TAX CALCULATOR</h1> </div>
+      <div class="container">
+        <div class="f1">
+          <div>
+            <label
+              >Enter gross annual income
+              <span
+                class="info-icon"
+                title="Gross annual income is your total salary in a year before any deductions"
+                >&#9432;</span
+              >
+              <input
+                type="number"
+                placeholder="Enter gross annual income"
+                id="grossincome"
+                required
+            /></label>
+          </div>
+        </div>
+        <div class="f2">
+          <div>
+            <label
+              >Enter extra income
+              <span
+                class="info-icon"
+                title="Include any additional income earned from sources other than the gross annual income. Examples include income from investments, rental properties, or freelance work."
+                >&#9432;</span
+              >
+              <input
+                type="number"
+                placeholder="Enter extra income from other sources"
+                id="extrain"
+                required
+            /></label>
+          </div>
+        </div>
+        <div class="f3">
+          <div>
+            <label
+              >Enter Age Group
+              <span
+                class="info-icon"
+                title="Select the appropriate age group based on your age"
+                >&#9432;</span
+              >
+              <select id="agegroup" required>
+                <option value=""></option>
+                <option value="less than 40">&lt; 40</option>
+                <option value="40 to 60">&ge; 40 &lt; 60</option>
+                <option value="greater than 60">&ge; 60</option>
+              </select></label
+            >
+          </div>
+        </div>
+        <div class="f4">
+          <div>
+            <label>
+              Enter total applicable deductions
+              <span
+                class="info-icon"
+                title="Enter the total amount of deductions that are applicable to your income. This may include deductions such as investments, expenses related to earning income, or any other eligible deductions."
+                >&#9432;</span
+              >
+              <input
+                type="number"
+                placeholder="Add total applicable deductions"
+                id="totaldeduc"
+                required
+            /></label>
+          </div>
+        </div>
+        <div class="f5">
+          <button type="submit" onclick="calculatetax()">SUBMIT</button>
+        </div>
+
+        <div class="ans" style="display: none">
+          <h2>Your Overall Income Will Be</h2>
+          <h3 id="price"></h3>
+          <h4>after tax deductions</h4>
+
+          <button type="reset" id="closebtn" onclick="gohome()">close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
